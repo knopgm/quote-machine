@@ -1,10 +1,10 @@
 :root {
-  --color1: #66D2D6;
-  --color2: #FBC740;
-  --color3: #BD97CB;
-  --color4: #E56997;
-  --color6: #ADE292;
-  --color7: #4120A9;
+  --color1: #66d2d6;
+  --color2: #fbc740;
+  --color3: #bd97cb;
+  --color4: #e56997;
+  --color6: #ade292;
+  --color7: #4120a9;
 }
 
 html,
@@ -23,6 +23,11 @@ li {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 14px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 *,
@@ -35,27 +40,25 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.background {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
+.app {
+  position: relative;
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin: 24px 0px;
-  border: none;
-  font-size: 16px;
-  align-items: center;
+  &__header-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    border: none;
+    align-items: center;
+  }
 }
 
 .quote-button {
   border: none;
-  padding: 16px;
+  padding: 1rem;
   //border-radius: 4px;
   box-shadow: 30px 70px 100px #0000004f;
   color: white;
@@ -63,8 +66,7 @@ body {
 }
 
 .quote-button:hover {
-  //opacity: 0.5;
-
+  opacity: 0.8;
 }
 
 a {
@@ -74,4 +76,3 @@ a {
     color: inherit;
   }
 }
-

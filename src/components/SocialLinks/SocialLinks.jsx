@@ -4,9 +4,8 @@ import "./style.scss";
 
 export function SocialLinks() {
   return (
-    <div className="social-wrapper">
+    <div className="social-links">
       <a
-        className="button"
         title="Tweet this quote!"
         href="https://twitter.com/intent/tweet"
         target="_top"
@@ -15,7 +14,6 @@ export function SocialLinks() {
       </a>
 
       <a
-        className="button"
         title="Post this quote in instagram!"
         href="https://www.instagram.com/"
         target="_top"

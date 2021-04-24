@@ -1,16 +1,18 @@
-.title {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 600;
-  color: white;
-}
+.header {
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+  }
 
-.subtitle {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 30px;
-  font-size: 24px;
-  font-weight: 200;
-  color: white;
+  &__subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 200;
+    color: white;
+  }
 }

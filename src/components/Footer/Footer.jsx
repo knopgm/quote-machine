@@ -5,22 +5,21 @@ import "./style.scss";
 export function Footer() {
   return (
     <div className="footer">
-      <span className="author">by Gab</span>
-      <div className="links">
+      <span className="footer__author"> - by Gab - </span>
+      <div className="footer__links">
         <a
+          className="footer__links__item"
           href="https://www.linkedin.com/feed/"
           target="_blank"
           rel="noreferrer"
-          className="contact-details"
         >
           <i className="fab fa-linkedin"></i>
         </a>
         <a
-          id="profile-link"
+          className="footer__links__item"
           href="https://github.com/knopgm"
           target="_blank"
           rel="noreferrer"
-          className="contact-details"
         >
           <i className="fab fa-github"></i>
         </a>

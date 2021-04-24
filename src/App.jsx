@@ -1,9 +1,13 @@
 import React from "react";
+
 import { motion } from "framer-motion";
 import { Wrapper } from "./components/Wrapper";
 import { Quote } from "./components/Quote";
 import { SocialLinks } from "./components/SocialLinks";
 import { Footer } from "./components/Footer";
+import { Background } from "./components/Background";
+import { Card } from "./components/Card";
+import { Header } from "./components/Header";
 
 import "./style.scss";
 
@@ -58,44 +62,53 @@ export class App extends React.Component {
 
   randomizeBgColor() {
     const newColor = colors[Math.floor(Math.random() * colors.length)];
-    this.setState({
-      color: newColor,
-    });
+    this.setState({ color: newColor });
   }
 
   render() {
-    return (
+    const contentMarkup = (
       <>
-        <motion.div
-          className="background"
-          animate={{
-            background: this.state.color,
-          }}
-        />
-        <Wrapper>
-          <motion.div animate={{ color: this.state.color }}>
+        <div className="app__header-wrapper">
+          <Header title="Random Quote" subtitle="- To be inspired..." />
+        </div>
+
+        <Card>
+          <motion.div
+            initial={{ color: this.state.color }}
+            animate={{ color: this.state.color }}
+          >
             <Quote
               message={this.state.quote.message}
               author={this.state.quote.author}
               textColor={this.state.color}
             />
 
-            <div className="buttons">
+            <div className="app__actions">
               <SocialLinks />
               <motion.button
                 className="quote-button"
                 onClick={this.handleNewQuoteClick}
                 disabled={this.state.loading}
+                initial={{ backgroundColor: this.state.color }}
                 animate={{ backgroundColor: this.state.color }}
               >
                 New Quote
               </motion.button>
             </div>
-
-            <Footer />
           </motion.div>
-        </Wrapper>
+        </Card>
       </>
+    );
+
+    return (
+      <div className="app">
+        <Background color={this.state.color} />
+        <Wrapper>
+          {this.state.quote.message && contentMarkup}
+          {this.state.loading && !this.state.quote.message && "loading"}
+          <Footer />
+        </Wrapper>
+      </div>
     );
   }
 }

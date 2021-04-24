@@ -1,22 +1,9 @@
 .wrapper {
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-  
-@media screen and (min-width: 769px) {
-    .wrapper {
-      max-width: 550px;
-    }
-}
-
-.inner-wrapper {
-  background: white;
-  padding: 20px;
-  //border-radius: 8px;
-  box-shadow: 30px 70px 100px #0000004f;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 550px;
 }
