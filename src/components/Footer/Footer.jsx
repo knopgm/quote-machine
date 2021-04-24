@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.scss";
 
-export function Footer(props) {
+export function Footer() {
   return (
     <div className="footer">
       <span className="author">by Gab</span>

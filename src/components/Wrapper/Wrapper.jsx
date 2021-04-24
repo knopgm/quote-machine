@@ -6,7 +6,7 @@ import "./style.scss";
 export function Wrapper(props) {
   return (
     <div className="wrapper">
-      <Header />
+      <Header title={`RANDOM QUOTE`} />
       <div className="inner-wrapper">{props.children}</div>
     </div>
   );

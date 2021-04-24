@@ -20,7 +20,7 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
+      loading: true,
       color: "#66D2D6",
       quote: {
         message: "",
@@ -30,7 +30,7 @@ export class App extends React.Component {
     this.handleNewQuoteClick = this.handleNewQuoteClick.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.fetchQuote();
   }
 
