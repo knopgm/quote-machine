@@ -63,7 +63,6 @@ body {
 .quote-button {
   border: none;
   padding: 1rem;
-  //border-radius: 4px;
   box-shadow: 30px 70px 100px #0000004f;
   color: white;
   font-size: 18px;
@@ -75,6 +74,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 
   &:visited {
     color: inherit;
